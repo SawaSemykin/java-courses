@@ -1,22 +1,36 @@
 public class Calculator {
 	private int result;
 	
-	public void add(int...params) {
-		for (Integer param:params) {
-			this.result+=param;
+	/**
+	* Прибавляет к результату значения входящих аргументов
+	* @args Входящие аргументы
+	*/
+	public void add(int...args) {
+		for (Integer arg:args) {
+			this.result+=arg;
 		}
 	}
 	
-	public void sub(int...params) {
-		for (Integer param:params) {
-			this.result-=param;
+	/**
+	* Вычитает из результата значения входящих аргументов
+	* @args Входящие аргументы
+	*/
+	public void sub(int...args) {
+		for (Integer arg:args) {
+			this.result-=arg;
 		}
 	}
 	
+	/**
+	* Возвращает значение результата
+	*/
 	public int getResult() {
 		return this.result;
 	}
 	
+	/**
+	* Обнуляет значение результата
+	*/
 	public void resetResult() {
 		 this.result=0;
 	}
